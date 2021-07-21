@@ -1,0 +1,33 @@
+body {
+  color: #666;
+}
+
+.demo-list-item {
+  width: 300px;
+}
+
+#playicon {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  z-index: 999;
+}
+
+#visual-timer-small {
+  display: block;
+}
+#visual-timer-big {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  #playicon {
+    top: 5px;
+  }
+  #visual-timer-small {
+    display: none;
+  }
+  #visual-timer-big {
+    display: block;
+  }
+}

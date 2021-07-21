@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width user-scalable=no">
+    <title>Metronome</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" type="text/css" -->
+    <!-- link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" -->
+    <link rel="stylesheet" href="assets/css/material.indigo.pink.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="js/math.js"></script>
+    <script defer src="assets/js/material.min.js"></script>
+    <!-- script src="assets/js/monkeypatch.js"></script -->
+    <script src="js/clickscheduler.js"></script>
+    <script src="js/globalmetronome.js"></script>
+    <script src="assets/js/metronome.js"></script>
+    <script src="js/writedom.js"></script>
+    <script src="js/visualtimer.js"></script>
+    <script language="Javascript">
+    //var timerWorker = null;
+    </script>
+  </head>
+  <body>
+    <audio id="myAudio">
+      <source src="audio/click1.mp3" type="audio/mp3">
+  	  <source src="audio/click1.ogg" type="audio/ogg">
+	  Your browser does not support the audio element.
+	</audio>
+	<script>
+  var audio_click = document.getElementById("myAudio");
+
+  function playAudio(pVolume) {
+    //var x = document.getElementById("myAudio");
+    var volume = pVolume || 1.0;
+    audio_click.volume = volume;
+    var promise = audio_click.play();
+    if (promise !== undefined) {
+        promise.then(_ = function() {
+            // Autoplay started!
+        }).catch(error = function() {
+          console.log("Autoplay method is not necessary for using the Javascript Offline Metronome");
+        });
+    }
+	}
+
+	function pauseAudio() {
+    //var x = document.getElementById("myAudio");
+    var promise = audio_click.pause();
+
+    if (promise !== undefined) {
+        promise.then(_ => {
+            // Autoplay started!
+        }).catch(error => {
+          console.log("Autoplay method is not necessary for using the Javascript Offline Metronome");
+            // Autoplay was prevented. Show a "Play" button so that user can start playback.
+        });
+    }
+
+	}
+
+	</script>
+    <div class="metronome">
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header id="metronome-header" class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Play/Pause Button -->
+            <span class="mdl-layout-title">
+              Global NTP Metronome
+            </span>
+            &nbsp;
+             <span id="timerout" style="display:none"></span>
+          </div>
+          <button class="mdl-button mdl-demo mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="playicon" onclick="play();">
+            <center>
+              <img id="i4m-play-icon" src="img/icons-svg/fa-audio-play-white.svg" style="display:none">
+              <img id="i4m-pause-icon" src="img/icons-svg/fa-audio-pause-white.svg">
+            </center>
+          </button>
+
+        </header>
+
+        <main class="mdl-layout__content">
+          <center  id="visual-timer-big">
+            <table cellspacing="30px">
+            <tr id="visual-timer-row">
+              <td><h1 class="visual-timer-cell" id="cell1">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell2">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell3">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell4">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell5">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell6">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell7">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell8">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell9">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell10">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell11">O</h1></td>
+              <td> <h1>&nbsp;</h1> </td>
+              <td><h1 class="visual-timer-cell" id="cell12">O</h1></td>
+            </tr>
+          </table>
+        </center>
+        <center  id="visual-timer-small">
+          <table cellspacing="30px">
+            <tr id="visual-timer-row">
+              <td><h3 class="visual-timer-cell" id="cellsmall1">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall2">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall3">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall4">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall5">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall6">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall7">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall8">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall9">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall10">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall11">O</h3></td>
+              <td> <h3>&nbsp;</h3> </td>
+              <td><h3 class="visual-timer-cell" id="cellsmall12">O</h3></td>
+            </tr>
+          </table>
+        </center>
+          <div id="timer-config" class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col">
+              <span id="debugcell" style="display:none">
+                <div id="result0">Timer Data</div>
+                <div id="result1">Timer Info</div>
+              </span>
+              <!--
+              Class Explaination:
+               mdl-button-fab - round button
+               mdl-js-ripple-effect
+              -->
+              <h6 class="mdl-typography--title">Tempo</h6>
+              <h2 id="bpm" class="mdl-typography--display-3"><output name="bpm" id="bpmOutput">120</output><span class="mdl-typography--subhead"> bpm</span></h2>
+
+              <input class="mdl-slider mdl-js-slider" type="range" name="bpm" id="bpmInput" value="120" min="20" max="250" oninput="tempo = event.target.value; bpmOutput.value = bpmInput.value;">
+
+              <h6 class="mdl-typography--title">Meter</h6>
+              <h2 class="mdl-typography--display-2"><output name="count" id="countOutput">4</output><span class="mdl-typography--subhead"> counts</span></h2>
+
+              <input class="mdl-slider mdl-js-slider" type="range" name="count" id="countInput" value="4" min="1" max="12" oninput="meter = event.target.value; countOutput.value = countInput.value;" onchange="set_visual_elements(parseInt(this.value))">
+
+              <h6 class="mdl-typography--title">Internet Latency</h6>
+              <h2 class="mdl-typography--display-2"><output name="latency" id="latencyOutput">0</output><span class="mdl-typography--subhead"> milliseconds</span></h2>
+
+              <input class="mdl-slider mdl-js-slider" type="range" name="latency" id="latencyInput" value="0" min="0" max="1000" oninput="timerWorker.latency = event.target.value; latencyOutput.value = latencyInput.value;">
+
+              <!--
+              <input class="mdl-button  mdl-demo mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" type="button" name="clicker" id="bClicker" value="Click" onclick="playAudio()">
+               <button class="mdl-button mdl-demo mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add" onclick="playAudio();">
+                 <center>
+                   <img id="i4m-audio-icon" src="img/icons-svg/audio-white.svg" style="display:Xnone">
+                 </center>
+               </button>
+             -->
+
+            </div>
+
+            <div class="mdl-cell mdl-cell--6-col">
+              <div id="timercalcresult"></div>
+
+              <button  class="mdl-button mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="color:white" id="bClickStarter" onclick="play()">
+                <center>
+                  <img id="i4m-play-icon2" src="img/icons-svg/fa-audio-play-white.svg" style="display:none">
+                  <img id="i4m-pause-icon2" src="img/icons-svg/fa-audio-pause-white.svg">
+                </center>
+              </button>
+              <input class="mdl-button mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="color:white" type="button" name="clicker" id="bClicker" value="Click" onclick="playAudio()">
+              <input id="bTimerInfo" style="display:none" class="mdl-button mdl-button--colored mdl-shadow--4dp mdl-color--accent" style="color:white" type="button" name="clicker" id="bClicker" value="Timer Info" onclick="get_timer_info()">
+              <h6 class="mdl-typography--title">Volumes</h6>
+
+              <p>Master</p>
+              <input id="sMasterVolume" class="mdl-slider mdl-js-slider" type="range"
+              min="0" max="100" value="50" tabindex="0"
+              oninput="timerWorker.masterVolume = event.target.value / 100;el('result1').innerHTML='Volume='+event.target.value">
+
+              <div id="define-click-volume" style="display:Xnone">
+                <p>Accent</p>
+                <input class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="100" value="100" tabindex="0"
+                oninput="timerWorker.accentVolume = event.target.value / 100;">
+
+                <p>Quarter Note</p>
+                <input id="sQuarterVolume" class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="100" value="75" tabindex="0"
+                oninput="timerWorker.quarterVolume = event.target.value / 100;">
+
+                <p>Decreasing Volume in Measure</p>
+                <input class="mdl-slider mdl-js-slider" type="range"
+                min="1" max="100" value="100" tabindex="0"
+                oninput="timerWorker.decreasingVolume = event.target.value / 100;">
+              </div>
+              <div id="define-sixteenth-volume" style="display:none">
+                <p>Eighth Note</p>
+                <input class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="100" value="0" tabindex="0"
+                oninput="timerWorker.eighthVolume = event.target.value / 100;">
+              </div>
+              <div id="define-sixteenth-volume" style="display:none">
+                <p>Sixteenth Note</p>
+                <input class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="100" value="0" tabindex="0"
+                oninput="timerWorker.sixteenthVolume = event.target.value / 100;">
+
+
+              </div>
+              <div id="define-triplet-volume" style="display:none">
+                <p>Triplet</p>
+                <input class="mdl-slider mdl-js-slider" type="range"
+                min="0" max="100" value="0" tabindex="0"
+                oninput="timerWorker.tripletVolume = event.target.value / 100;">
+              </div>
+
+            </div>
+          </div>
+          <center>
+            <hr>
+            Javascript Metronome based on &nbsp; <a href="https://github.com/scottwhudson/metronome" target="_blank">Scott Hudson offline Javascript Metronome</a>
+            <hr>
+            <a href="https://www.github.com/niebert/metronome">Forked GitHub-Repository - Bert Niehaus (2021)</a>
+            <br>
+            <a href="https://niebert.github.io/metronome/">Online Demo Metronome</a>
+          </center>
+        </main>
+        <script type="text/javascript">
+          init_visual_timer();
+          //show_element("debugcell");
+          //show_element("bTimerInfo");
+        </script>
+      </div>
+    </div>
+   </body>
+</html>

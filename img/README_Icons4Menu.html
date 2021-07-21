@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="icons4menu">Icons4Menu</h1>
+<p>This repository is a SVG images resource based on SVG icons <a href="https://jquerymobile.com/download/">JQuery Mobile 1.4.5</a> and extended with SVG icons from <a href="https://commons.wikimedia.org/">Wiki Commons</a>. The icons are primary collected for menus in webbased application or for icons in buttons.</p>
+<h2 id="usage-of-icons4menu---webapps">Usage of Icons4Menu - WebApps</h2>
+<p>Icons4Menu are generated for the Wikiversity Learning Resource about <a href="https://en.wikiversity.org/wiki/AppLSAC">AppLSAC</a>. * <strong><code>hamburger_menu_app</code></strong> Icons in Hamburger Menus like <a href="https://niebert.github.io/hamburger_menu_app/">hamburger_menu_app</a> * <strong><code>jsoneditor_app</code></strong> Icons in JSON Editor WebApp in buttons - see <a href="https://niebert.github.io/jsoneditor_app/">jsoneditor_app</a></p>
+<h2 id="download-of-icons-with-a-script">Download of Icons with a Script</h2>
+<p>The icons can be downloaded with a script: * <a href="https://niebert.github.io/icons4menu/wget_icons.sh">wget_icons.sh</a> * The download of icons for your WebApp (resp. <a href="https://en.wikiversity.org/wiki/AppLSAC">AppLSAC</a>) can be started from the shell command line with</p>
+<pre><code>   sh ./wget_icons.sh</code></pre>
+<ul>
+<li><p>the script call of <a href="https://niebert.github.io/icons4menu/wget_icons.sh">wget_icons.sh</a> downloads the SVG icons of this repository and it is equivalent to the script call:</p>
+<pre><code>   sh ./wget_icons.sh svg</code></pre></li>
+<li><p>if you want to download the PNG icons of the repository (JQuery Mobile 1.4.5 - CC0) you can call the script with the parameter <code>png</code>:</p>
+<pre><code>   sh ./wget_icons.sh png</code></pre></li>
+</ul>
+<h2 id="update-the-wget_icons.sh-script">Update the <code>wget_icons.sh</code> Script</h2>
+<p>Any time new icons are added to the repository <code>icons4menu</code> the script <code>wget_icons.sh</code> is updated as well, because the new icons are added to the list of <code>wget</code> download commands in the script. There is an easy way to update the <code>wget_icons.sh</code> script to the latest version by downloading the script <a href="https://niebert.github.io/icons4menu/update_wget_icons.sh"><code>update_wget_icons.sh</code></a>. If you want to use the update script, navigate to the folder in which you want to have the <code>icons4menu</code> folder <code>img/</code> and then download the script with:</p>
+<pre><code>  wget https://niebert.github.io/icons4menu/update_wget_icons.sh</code></pre>
+<p>Please check the content of the script before executing, so that you are sure that the script does what you expect the script to (i.e. updating the script <code>wget_icons.sh</code>). Then check the content of <code>wget_icons.sh</code>. Performs the script the expected down or do you want to reduce the number of downloaded icons before executing the script <code>wget_icons.sh</code>. If you are sure that the script download all the icons you need, perform the download operation by calling:</p>
+<pre><code>  sh ./wget_icons.sh</code></pre>
+<h2 id="json-file-json4icons.json-and-json4icons.js">JSON file <code>json4icons.json</code> and <code>json4icons.js</code></h2>
+<p>The JSON file <code>json4icons.json</code> contains a list of all icons with * <code>name</code>: filename, * <code>path</code>: the path to the icon, * <code>license</code>: the license information for the icon, * <code>raw</code>: available only for SVG (Scalable Vector Graphics) images. <code>raw</code> contains the raw string content was added to the JSON. This was added for transparent encoding of the SVG and those developers that prefer to use the raw string format in XML for the image can use that. In a browser you can convert<br />
+* <code>src</code>: is the base64 encoded data of the image as Data URL that can used in images in the DOM. The source us either the <code>XML</code> source text of the <code>SVG</code> image or the binary data as base64 encoded data of the image.</p>
+<p>The file <code>json4icons.js</code> is a library that populates a hash object <code>vDataJSON</code> defined with <code>var vDataJSON = {};</code> in the main HTML file that embeds the <code>icons4menu</code>. * <code>used</code> is boolean that can be set by an application to reduce the number of icons in the JSON data to the used icons. Set all used icons to <code>true</code> and remove all the unused icons from the JSON to reduce the size of the JSON especially for WebApps (see also <a href="https://en.wikiversity.org/wiki/WebApps_with_LocalStorage_and_AppCache">AppLSAC on Wikiversity</a> ).</p>
+<h3 id="example-icon-record-in-json4icons.js">Example Icon Record in <code>json4icons.js</code></h3>
+<div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;arrow-r-black.svg&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;path&quot;</span><span class="fu">:</span> <span class="st">&quot;img/icons-svg&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;used&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span>
+    <span class="dt">&quot;src&quot;</span><span class="fu">:</span> <span class="st">&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0....&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;license&quot;</span><span class="fu">:</span> <span class="st">&quot;CC0&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;group&quot;</span><span class="fu">:</span> <span class="st">&quot;arrow&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;raw&quot;</span><span class="fu">:</span> <span class="st">&quot;&lt;?xml version=</span><span class="ch">\&quot;</span><span class="st">1.0</span><span class="ch">\&quot;</span><span class="st">...&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;wikicommons&quot;</span><span class="fu">:</span> <span class="st">&quot;https://jquerymobile.com/download/&quot;</span>
+<span class="fu">}</span></code></pre></div>
+<p>The content in <code>src</code> and <code>raw</code> are shortend so that the record fits into this README page.</p>
+<h2 id="json-file-icons4menu">JSON File Icons4Menu</h2>
+<p>The repository contains also a <a href="https://niebert.github.io/icons4menu/json4icons.json">JSON file</a> with all icons of the repository. The JSON file <a href="https://niebert.github.io/icons4menu/json4icons.json"><code>json4icons.json</code></a> can be used to identify the used icons with NodeJS and delete the unused icons from your <code>img/</code> folder of your WebApp to save disk space and reduce the size of your WebApp.</p>
+<p>Even if you remove icons from your WebApp in the folder <code>img/</code> you should keep the license file <code>LICENSE_Jquery_Mobile.txt</code>, <code>README.md</code> and <code>README_Icons4Menu.html</code> in that repository for licensing information about the icons.</p>
+<h2 id="preview-all-icons4menu">Preview All Icons4Menu</h2>
+<p>The listed icons below do not contain the <a href="https://jquerymobile.com/download/">JQuery Mobile 1.4.5 Icons</a>. To preview all icons for navigation menus see</p>
+<ul>
+<li><a href="https://niebert.github.io/icons4menu">Preview Icons4Menu</a></li>
+<li><a href="https://niebert.github.io/hamburger_menu_app">Usage in Hamburger Menu</a> - <a href="https://www.github.com/niebert/icons4menu">GitHub-Repo</a></li>
+<li><a href="https://en.wikiversity.org/wiki/WebApps_with_LocalStorage_and_AppCache/">Learn about AppLSAC</a> - This repository was developed for a Wikiversity learning resource. The</li>
+</ul>
+<h2 id="added-icons-from-wikicommons">Added Icons from WikiCommons</h2>
+<p>The following icons are selected from the following <a href="https://commons.wikimedia.org/w/index.php?title=Special:Search&amp;limit=500&amp;offset=0&amp;profile=default&amp;search=FontAwesome.com&amp;advancedSearch-current=%7B%7D&amp;ns0=1&amp;ns6=1&amp;ns12=1&amp;ns14=1&amp;ns100=1&amp;ns106=1">SVG-Icons in Wiki Commons</a>. For FontAwesome Icon survey see <a href="https://fontawesome.com/v4.7.0/icons/">FontAwesome 4.7.0</a> for finding the appropriate icon file name.</p>
+<h3 id="load-save-print-cancel-trash-settings">Load, Save, Print, Cancel, Trash, Settings</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/action.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>action.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-action.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-folder-open.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Folder_open_alt_font_awesome.svg"><code>fa-folder-open.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Folder_open_alt_font_awesome.svg"><code>Folder_open_alt_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-hamburger-icon.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/0/04/Reorder_font_awesome.svg"><code>fa-hamburger-icon.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Reorder_font_awesome.svg"><code>Reorder_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-print.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/e/e4/Print_font_awesome.svg"><code>fa-print.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Print_font_awesome.svg"><code>Print_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-settings.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/9/92/Cog_font_awesome.svg"><code>fa-settings.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Cog_font_awesome.svg"><code>Cog_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-trash.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/7/7d/Trash_font_awesome.svg"><code>fa-trash.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Trash_font_awesome.svg"><code>Trash_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/grid.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>grid.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-grid.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/home.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>home.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-home.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/info.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>info.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-info.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>main</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/shop.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>shop.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-shop.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>main</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="miscellaneous-icons">Miscellaneous Icons</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/alert.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>alert.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-alert.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/audio.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>audio.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-audio.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/bars.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>bars.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-bars.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/bullets.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>bullets.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-bullets.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/calendar.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>calendar.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-calendar.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/camera.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>camera.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-camera.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/check.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>check.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-check.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/clock.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>clock.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-clock.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/cloud.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>cloud.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-cloud.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/comment.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>comment.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-comment.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/delete.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>delete.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-delete.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/edit.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>edit.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-edit.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/eye.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>eye.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-eye.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-barcode.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/6/6b/Barcode_font_awesome.svg"><code>fa-barcode.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Barcode_font_awesome.svg"><code>Barcode_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-edit.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/4/4c/Edit_font_awesome.svg"><code>fa-edit.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Edit_font_awesome.svg"><code>Edit_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-envelope.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/3/3d/Envelope_font_awesome.svg"><code>fa-envelope.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Envelope_font_awesome.svg"><code>Envelope_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-file-save.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/2/20/Save_font_awesome.svg"><code>fa-file-save.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Save_font_awesome.svg"><code>Save_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-globe.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Globe_font_awesome.svg"><code>fa-globe.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Globe_font_awesome.svg"><code>Globe_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-harddisk.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Font_Awesome_5_solid_hdd.svg"><code>fa-harddisk.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_hdd.svg"><code>Font_Awesome_5_solid_hdd.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-language.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/3/32/Language_font_awesome_v5.svg"><code>fa-language.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Language_font_awesome_v5.svg"><code>Language_font_awesome_v5.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-qrcode.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/b/bb/Qrcode_font_awesome.svg"><code>fa-qrcode.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Qrcode_font_awesome.svg"><code>Qrcode_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-sort.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/0/07/Sort_font_awesome.svg"><code>fa-sort.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Sort_font_awesome.svg"><code>Sort_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/forward.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>forward.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-forward.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/gear.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>gear.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-gear.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-avatar-a.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>i4m-avatar-a.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-avatar-a.svg"><code>Icon4Menu-avatar-a.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-wiki2reveal-frame.svg" width="20"> </span></td>
+<td><a href="https://niebert.github.io/img/icons-svg/i4m-wiki2reveal-frame.svg"><code>i4m-wiki2reveal-frame.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-wiki2reveal-frame.svg"><code>Icon4Menu-wiki2reveal-frame.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-wiki2reveal.svg" width="20"> </span></td>
+<td><a href="https://niebert.github.io/img/icons-svg/i4m-wiki2reveal-black.svg"><code>i4m-wiki2reveal.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-wiki2reveal.svg"><code>Icon4Menu-wiki2reveal.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/lock.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>lock.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-lock.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/mail.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>mail.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-mail.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/navigation.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>navigation.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-navigation.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/recycle.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>recycle.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-recycle.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/video.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>video.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-video.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>other</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="arrow">Arrow</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/arrow-d.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>arrow-d.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-arrow-d.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>arrow</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/arrow-l.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>arrow-l.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-arrow-l.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>arrow</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/arrow-r.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>arrow-r.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-arrow-r.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>arrow</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/arrow-u-l.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>arrow-u-l.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-arrow-u-l.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>arrow</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/arrow-u-r.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>arrow-u-r.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-arrow-u-r.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>arrow</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/arrow-u.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>arrow-u.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-arrow-u.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>arrow</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="navigation">Navigation</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/carat-d.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>carat-d.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-carat-d.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/carat-l.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>carat-l.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-carat-l.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/carat-r.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>carat-r.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-carat-r.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/carat-u.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>carat-u.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-carat-u.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-carat-dd.svg" width="20"> </span></td>
+<td><a href="https://niebert.github.io/img/icons-svg/i4m-carat-dd.svg"><code>i4m-carat-dd.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-carat-dd.svg"><code>Icon4Menu-carat-dd.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-carat-ll.svg" width="20"> </span></td>
+<td><a href="https://niebert.github.io/img/icons-svg/i4m-carat-ll.svg"><code>i4m-carat-ll.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-carat-ll.svg"><code>Icon4Menu-carat-ll.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-carat-rr.svg" width="20"> </span></td>
+<td><a href="https://niebert.github.io/img/icons-svg/i4m-carat-rr.svg"><code>i4m-carat-rr.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-carat-rr.svg"><code>Icon4Menu-carat-rr.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/i4m-carat-uu.svg" width="20"> </span></td>
+<td><a href="https://niebert.github.io/img/icons-svg/i4m-carat-uu.svg"><code>i4m-carat-uu.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Icon4Menu-carat-uu.svg"><code>Icon4Menu-carat-uu.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/location.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>location.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-location.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/nav-back.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>nav-back.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-nav-back.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>navigation</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="audio-player">Audio Player</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-backward.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/c/c8/Backward_font_awesome.svg"><code>fa-audio-backward.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Backward_font_awesome.svg"><code>Backward_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-eject.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/1/14/Font_Awesome_5_solid_eject.svg"><code>fa-audio-eject.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_eject.svg"><code>Font_Awesome_5_solid_eject.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-forward.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/7/7f/Forward_font_awesome.svg"><code>fa-audio-forward.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Forward_font_awesome.svg"><code>Forward_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-pause.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/a/af/Pause_font_awesome.svg"><code>fa-audio-pause.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Pause_font_awesome.svg"><code>Pause_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-play.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/d/d3/Play_font_awesome.svg"><code>fa-audio-play.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Play_font_awesome.svg"><code>Play_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-record.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_font_awesome.svg"><code>fa-audio-record.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Circle_font_awesome.svg"><code>Circle_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-audio-stop.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/b/b9/Font_Awesome_5_solid_square.svg"><code>fa-audio-stop.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_square.svg"><code>Font_Awesome_5_solid_square.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>audio</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="products-and-objects">Products and Objects</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-book.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Book_font_awesome.svg"><code>fa-book.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Book_font_awesome.svg"><code>Book_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>product</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-key.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/d/d5/Font_Awesome_5_solid_key.svg"><code>fa-key.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_key.svg"><code>Font_Awesome_5_solid_key.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>product</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-picture.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/8/84/Picture_font_awesome.svg"><code>fa-picture.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Picture_font_awesome.svg"><code>Picture_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>product</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="device">Device</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-camera.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/d/d1/Camera_font_awesome.svg"><code>fa-camera.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Camera_font_awesome.svg"><code>Camera_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>device</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-tablet.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/3/30/Tablet_font_awesome.svg"><code>fa-tablet.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Tablet_font_awesome.svg"><code>Tablet_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>device</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-vr-headset.svg" width="20"> </span></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_brands_simplybuilt.svg"><code>fa-vr-headset.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:File:Font_Awesome_5_brands_simplybuilt.svg"><code>File:Font_Awesome_5_brands_simplybuilt.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>device</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/phone.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>phone.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-phone.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>device</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="action-and-processes">Action and Processes</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-cancel.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/d/de/Remove_font_awesome.svg"><code>fa-cancel.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Remove_font_awesome.svg"><code>Remove_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-spinner.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/d/d4/Spinner_font_awesome.svg"><code>fa-spinner.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Spinner_font_awesome.svg"><code>Spinner_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-undo.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/0/0d/Undo_font_awesome.svg"><code>fa-undo.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Undo_font_awesome.svg"><code>Undo_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/forbidden.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>forbidden.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-forbidden.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/minus.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>minus.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-minus.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/plus.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>plus.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-plus.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/refresh.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>refresh.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-refresh.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/star.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>star.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-star.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>action</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/tag.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>tag.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-tag.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>action</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="media">Media</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-chart-pie.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/5/56/Font_Awesome_5_solid_chart-pie.svg"><code>fa-chart-pie.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_chart-pie.svg"><code>Font_Awesome_5_solid_chart-pie.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>media</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-line-chart.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/e/ed/Font_Awesome_5_solid_chart-line.svg"><code>fa-line-chart.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_chart-line.svg"><code>Font_Awesome_5_solid_chart-line.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>media</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="editor">Editor</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-copy.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/0/04/Copy_font_awesome.svg"><code>fa-copy.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Copy_font_awesome.svg"><code>Copy_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-enumeration.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/3/31/Ol_font_awesome.svg"><code>fa-enumeration.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Ol_font_awesome.svg"><code>Ol_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-font.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/f/f1/Font_Awesome_5_solid_font.svg"><code>fa-font.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_font.svg"><code>Font_Awesome_5_solid_font.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-list.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/List_font_awesome.svg"><code>fa-list.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:List_font_awesome.svg"><code>List_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-minus-square.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/7/72/Font_Awesome_5_solid_minus-square.svg"><code>fa-minus-square.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_minus-square.svg"><code>Font_Awesome_5_solid_minus-square.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-paste.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/4/46/Paste_font_awesome.svg"><code>fa-paste.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Paste_font_awesome.svg"><code>Paste_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-plus-square.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/2/20/Font_Awesome_5_solid_plus-square.svg"><code>fa-plus-square.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_solid_plus-square.svg"><code>Font_Awesome_5_solid_plus-square.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>editor</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/search.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>search.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-search.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>editor</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="filetype">Filetype</h3>
+<table style="width:33%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-file-archive.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Font_Awesome_5_regular_file-archive.svg"><code>fa-file-archive.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Font_Awesome_5_regular_file-archive.svg"><code>Font_Awesome_5_regular_file-archive.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>filetype</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="login">Login</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-signin.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Signin_font_awesome.svg"><code>fa-signin.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Signin_font_awesome.svg"><code>Signin_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>login</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-signout.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/d/db/Signout_font_awesome.svg"><code>fa-signout.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Signout_font_awesome.svg"><code>Signout_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>login</code></td>
+</tr>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/power.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>power.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-power.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>login</code></td>
+</tr>
+<tr class="even">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/user.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>user.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-user.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>login</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vehicle">Vehicle</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/fa-truck.svg" width="20"> </span></td>
+<td><a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/Truck_font_awesome.svg"><code>fa-truck.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://commons.wikimedia.org/wiki/File:Truck_font_awesome.svg"><code>Truck_font_awesome.svg</code></a></td>
+<td><a href='https://creativecommons.org/licenses/by-sa/3.0/' target='_blank'>CC BY-SA 3.0</a></td>
+<td><code>vehicle</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="medical">Medical</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Icon</th>
+<th>File</th>
+<th>Folder</th>
+<th>Source File</th>
+<th>Licence</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span style="bgcolor:#888888"><img src="https://niebert.github.io/icons4menu/img/icons-svg/heart.svg" width="20"> </span></td>
+<td><a href="https://jquerymobile.com/download/"><code>heart.svg</code></a></td>
+<td><code>img/icons-svg</code></td>
+<td><a href="https://jquerymobile.com/download/"><code>JQ-heart.svg</code></a></td>
+<td><a href='https://creativecommons.org/publicdomain/zero/1.0/deed.en' target='_blank'>CC0</a></td>
+<td><code>medical</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="create-your-own-icons">Create your own Icons</h2>
+<p>If you want to create your own items you can use * <strong>(<a href="https://en.wikipedia.org/wiki/Inkscape">InkScape</a>)</strong> the <a href="https://en.wikipedia.org/wiki/Inkscape">open source software InkScape</a> - Download: <a href="https://inkscape.org/download">InkScape</a>. * <strong>(<a href="https://en.wikipedia.org/wiki/LibreOffice_Draw">LibreOffice Draw</a></strong> Alternatively you can also use <a href="https://en.wikipedia.org/wiki/LibreOffice_Draw">LibreOffice-Draw</a> and load the example icons <code>icons-odg/</code> or the icon templates * <code>icons-odg/icon-empty.odg</code> or * <code>icons-odg/icon-frame.odg</code> or If you want to export the new icon please use the SVG file format. The Scalable Vector Graphics (SVG) defines the image with the Extensible Markup Language as (XML)-based vector image for two-dimensional graphics. The format has the advantage, that increasing the size of the icon does not create pixel effects, because the icon is defined by geometric shapes and not a raster of pixels.</p>
+<p>Save the icon with 14x14 pixel for width and height, so that the icon has a standard size for a menu if not additional size attributes are used in CSS or the <code>img</code>-tag itself.</p>
+<h2 id="style-sheets-css-for-icons">Style Sheets CSS for Icons</h2>
+<p>The spinner icon is static. You might expect the spinner icon <code>fa-spinner.svg</code> to rotate. This can be accomplish with CSS class definition for a class <code>icon-spin</code>: * Add in your CSS file the following styles for the class <code>icon-spin</code>:</p>
+<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.icon-spin</span> <span class="kw">{</span>
+    <span class="kw">position:</span> <span class="dt">absolute</span><span class="kw">;</span>
+    <span class="kw">top:</span> <span class="dt">50%</span><span class="kw">;</span>
+    <span class="kw">left:</span> <span class="dt">50%</span><span class="kw">;</span>
+    <span class="kw">width:</span> <span class="dt">120px</span><span class="kw">;</span>
+    <span class="kw">height:</span> <span class="dt">120px</span><span class="kw">;</span>
+    <span class="kw">margin:</span><span class="dt">-60px</span> <span class="dt">0</span> <span class="dt">0</span> <span class="dt">-60px</span><span class="kw">;</span>
+    <span class="kw">-webkit-animation:</span>spin <span class="dt">4s</span> linear infinite<span class="kw">;</span>
+    <span class="kw">-moz-animation:</span>spin <span class="dt">4s</span> linear infinite<span class="kw">;</span>
+    <span class="kw">animation:</span>spin <span class="dt">4s</span> linear infinite<span class="kw">;</span>
+<span class="kw">}</span>
+@-moz-keyframes spin <span class="kw">{</span> <span class="er">100%</span> <span class="er">{</span> <span class="kw">-moz-transform:</span> rotate(<span class="dt">360deg</span>)<span class="kw">;</span> <span class="kw">}</span> }
+@-webkit-keyframes spin <span class="kw">{</span> <span class="er">100%</span> <span class="er">{</span> <span class="kw">-webkit-transform:</span> rotate(<span class="dt">360deg</span>)<span class="kw">;</span> <span class="kw">}</span> }</code></pre></div>
+<ul>
+<li><p>The you can make the icons rotate by adding the <code>icon-spin</code> classname to the icon:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;img</span><span class="ot"> class=</span><span class="st">&quot;icon-spin&quot;</span><span class="ot"> src=</span><span class="st">&quot;img/icons-svg/fa-spinner.svg&quot;</span><span class="ot"> alt=</span><span class="st">&quot;&quot;</span><span class="ot"> width=</span><span class="st">&quot;20&quot;</span><span class="ot"> height=</span><span class="st">&quot;20&quot;</span><span class="kw">&gt;</span></code></pre></div></li>
+</ul>
+<h2 id="scan-icons">Scan Icons</h2>
+<h3 id="scan-shell-script-for-images">Scan Shell Script for images</h3>
+<p>The shell script <code>scan_icons.sh</code> scans all icons in the subdirectory <code>img/</code> and creates and HTML file <code>img/index.html</code> and a <code>wget</code> download script, that can be modified for downloading a subset of the images.</p>
+<h3 id="shell-script-wget_icons.sh">Shell Script <code>wget_icons.sh</code></h3>
+<p>The shell script <code>wget_icons.sh</code> can be used to download a subset of images. In the provided default version it downloads all icons in this repository.</p>
+<ul>
+<li>This <code>README.md</code> will also be downloaded and stored in <code>img/README_Icons4Menu.html</code>. Please do not remove this file because it provides a reference to the origin of the files and the corresponding licenses.</li>
+<li>The JQuery Mobile License is stored in <code>img/LICENSE_Jquery_Mobile.txt</code>. For JQuery Mobile license see file <code>LICENSE_Jquery_Mobile.txt</code> in the repository <code>Icons4Menu</code>.</li>
+</ul>
+<h3 id="use-in-other-svg-images-in-other-repositories">Use in other SVG Images in other repositories</h3>
+<p>The script <code>update_wget_icons.sh</code> updates the script <code>wget_icons.sh</code> from the repository <a href="https://www.github.com/niebert/icons4menu">icons4menu</a> and replaces the script <code>wget_icons.sh</code>. The script <code>wget_icons.sh</code> can be used to download an updated version of the icons. Please modify the script according to your needs, to download just a subset for your <a href="https://en.wikiversity.org/wiki/WebApps_with_LocalStorage_and_AppCache">AppLSAC</a>.</p>
+<p>If the repository <a href="https://www.github.com/niebert/icons4menu">icons4menu</a> is expanded with more icons with a Creative Commons license, that it is recommended to update the download script <code>wget_icons.sh</code> with the following commands:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sh</span> ./update_wget_icons.sh
+<span class="fu">sh</span> ./wget_icons.sh</code></pre></div>
+<p>The second command downloads the icons. You can help to minimize the GitHub server load by tailoring the script according to your needs.</p>
+<p>If you want to check out an <a href="">example repository on GitHub</a>, that uses the <a href="https://niebert.github.io/hamburger_menu_app">Icons4Menu icons</a> in an AppLSAC analyze the subdirectory <code>img/</code> in <a href="https://www.github.com/niebert/hamburger_menu_app"><code>hamburger_menu_app</code></a>.</p>
+<h2 id="add-license-info-file">Add License Info File</h2>
+<p>If you use the repository add this README.md file to the <a href="https://en.wikiversity.org/wiki/WebApps_with_LocalStorage_and_AppCache">WebApp</a>, so that users of web-based applications can identify the origin of the SVG and PNG icons. The repository incorporated SVG and PNG icons with two licenses: * Creative Commons <code>CC Zero</code> - https://creativecommons.org/publicdomain/zero/1.0/deed.en * Creative Commons <code>CC BY-SA 3.0</code> - see https://creativecommons.org/licenses/by-sa/3.0/ with the <code>fa-</code> as file attribution prefix.</p>
+<h3 id="attribution-for-files---file-prefix">Attribution for Files - File Prefix</h3>
+<p>If we consider the <code>CC BY-SA 3.0</code> license provides the freedom to: * <strong>Share</strong> — copy and redistribute the material in any medium or format * <strong>Adapt</strong> — remix, transform, and build upon the material for any purpose, even commercially. These two freedoms are also provided for the license <code>CC Zero</code>. Furthermore for all <code>CC BY-SA 3.0</code> licensed icons an <code>attribution</code> and a <code>share alike</code> requirement is defined (see https://creativecommons.org/licenses/by-sa/3.0/):</p>
+<ul>
+<li><strong>Attribution</strong> — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li>
+<li><strong>ShareAlike</strong> — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</li>
+</ul>
+<p>The JQuery Mobile 1.4.5 PNG and SVG icons in this repository (i.e. icons without <code>fa-</code> prefix) do not require the &quot;attribution&quot;, but it is recommended to provide attribution also to JQuery Mobile 1.4.5 with the <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC Zero</a> license for icons without the <code>fa-</code> prefix. Especially for adding more icons in forks of the repository <code>icons4menu</code> the prefix <code>fa-</code> should also be used to distinguish <code>CC Zero</code> licensed icons without <code>fa-</code> prefix from <code>CC BY-SA 3.0</code> licensed icon that need a <code>file attribution</code> by adding the prefix <code>fa-</code> in the filename.</p>
+<h3 id="more-than-2-licenses-in-forks-of-icons4menu-with-license-prefix">More than 2 Licenses in Forks of <code>icons4menu</code> with license prefix</h3>
+<p>If you have more than 2 licenses in your fork of <code>icons4menu</code> you could add a license prefix for all icons, e.g.:</p>
+<ul>
+<li><code>cc0-recycle.svg</code> for <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en"><code>CC Zero</code></a> licensed icons from JQuery Mobile 1.4.5,</li>
+<li><code>cc3bysa-recycle.svg</code> for <a href="https://creativecommons.org/licenses/by-sa/3.0/"><code>CC BY-SA 3.0</code></a> licensed icons from <a href="https://commons.wikimedia.org/w/index.php?title=Special:Search&amp;limit=500&amp;offset=0&amp;profile=default&amp;search=FontAwesome.com&amp;advancedSearch-current=%7B%7D&amp;ns0=1&amp;ns6=1&amp;ns12=1&amp;ns14=1&amp;ns100=1&amp;ns106=1">Wiki Commons</a>,</li>
+<li><code>cc4by-recycle.svg</code> for <a href="https://creativecommons.org/licenses/by/4.0/"><code>CC BY 4.0</code></a> licensed icons e.g. from an additional source used in the fork of <code>icons4menu</code>.</li>
+</ul>
+<p>This allows users to identify the license of the file directly from the filename.</p>
+</body>
+</html>
