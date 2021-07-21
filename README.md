@@ -1,20 +1,23 @@
 # Responsive Web Audio Metronome
 
-![alt tag](assets/img/globalmetronome.png)
+![alt tag](assets/img/screenshot_globalmetronome.png)
 ## Online Demo of Javascript Offline Metronome
 [Demo Javascript Metronome](https://niebert.github.io/globalmetronome)
 
-## Issues after Forking
+## Fixed Issues after Forking
 Issues after fork from Scott Hudsons metronome:
-* Icons for play button were missing - checked remote CSS
-* Chrome support for Webworkers to run offline - already mentioned by Scott Hudson 2016 - check causes
+* [Icons for menu added](https://www.github.com/niebert/icons4menu) for missing play button
+* Chrome support - runs now offline - issue fixed that was already mentioned by Scott Hudson 2016.
 
 
 ## Information about Scott Hudsons Work
-This metronome is based on Scott Hudson great work for an Offline Javascript Metronome, that runs in your browser without internet connection.
+This [metronome is based on Scott Hudson](https://github.com/scottwhudson/metronome) great work for an Offline Javascript Metronome, that runs in your browser without internet connection.
 
 ### History
-Scott Hudson used @cwilso's [HTML5 demo metronome](http://webaudiodemos.appspot.com/metronome/index.html) as a starting point.
+* Create for the [Wikiversity Learning Resource about a Global Metronome](https://en.wikiversity.org/wiki/Online_music_jam/Global_Metronome)
+* [Globals Metronme](https://github.com/niebert/globalmetronome) fixed offline running in the Chrome browser and added a global metronome clicker event that is executed on all devices simultaneously.
+* [Fork of Scott Hudson Metronme](https://github.com/niebert/metronome) fixed a fetching remote libraries and CSS resources so that it runs offline.
+* [Scott Hudson Metronome](https://github.com/scottwhudson/metronome) used @cwilso's [HTML5 demo metronome](http://webaudiodemos.appspot.com/metronome/index.html) as a starting point.
 
 ### Features
 Scott added several features to @cwilso's [HTML5 demo metronome](http://webaudiodemos.appspot.com/metronome/index.html) which are commonly seen in professional metronomes, including:
@@ -36,6 +39,7 @@ Scott mentioned that Chrome doesn't like running web workers locally apparently.
 2. open `index.html` using a browser and start the metronome.
 
 ### Todos
+* update [Wikiversity Learning Resource about Global Metronome](https://en.wikiversity.org/wiki/Online_music_jam/Global_Metronome)
 * toggle note pitches
 * tap tempo detection
 * easy sound file import
