@@ -1,8 +1,16 @@
 # Responsive Web Audio Metronome
 
 ![alt tag](assets/img/screenshot_globalmetronome.png)
+
+
 ## Online Demo of Javascript Offline Metronome
 [Demo Javascript Metronome](https://niebert.github.io/globalmetronome)
+
+## Share a Link with BPM and Meter settings
+If you want to share the meter settings with other musicians just add a `bpm` and a `meter` parameter to link to the global metronome, e.g. [BPM=75 and Meter=3 for a Waltz](https://niebert.github.io/globalmetronome/globalmetronome.html?bpm=75&meter=3)
+```
+   https://niebert.github.io/globalmetronome/globalmetronome.html?bpm=75&meter=3
+```  
 
 ## Fixed Issues after Forking
 Issues after fork from Scott Hudsons metronome:

@@ -17,8 +17,9 @@
     <script src="js/clickscheduler.js"></script>
     <script src="js/globalmetronome.js"></script>
     <script src="assets/js/metronome.js"></script>
-    <script src="js/writedom.js"></script>
     <script src="js/visualtimer.js"></script>
+    <script src="js/linkparam.js"></script>
+    <script src="js/writedom.js"></script>
     <script language="Javascript">
     //var timerWorker = null;
     </script>
@@ -244,6 +245,19 @@
             <a href="https://niebert.github.io/metronome/">Online Demo of non-global Metronome</a>
           </center>
         </main>
+        <script>
+      		var vLinkParam = new LinkParam();
+      		vLinkParam.init(document);
+      		if (vLinkParam.exists("bpm")) {
+      			var vBPM = vLinkParam.getValue("bpm");
+            vBPM = parseInt(vBPM);
+      			console.log("Beats Per Minute: "+vBPM);
+      			document.getElementById("bpmOutput").innerHTML = vBPM;
+      			document.getElementById("bpmInput").value = vBPM;
+      		} else {
+      			console.log("BPM is not set via LinkParameter 'bpmInput'")
+      		}
+      	</script>
         <script type="text/javascript">
           init_visual_timer();
           //show_element("debugcell");
