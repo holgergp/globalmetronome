@@ -6,14 +6,11 @@
     <title>Metronome</title>
 
     <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" type="text/css" -->
-    <!-- link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" -->
     <link rel="stylesheet" href="assets/css/material.indigo.pink.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
     <script src="js/math.js"></script>
     <script defer src="assets/js/material.min.js"></script>
-    <!-- script src="assets/js/monkeypatch.js"></script -->
     <script src="js/clickscheduler.js"></script>
     <script src="js/globalmetronome.js"></script>
     <script src="assets/js/metronome.js"></script>
@@ -248,6 +245,7 @@
         <script>
       		var vLinkParam = new LinkParam();
       		vLinkParam.init(document);
+          //--- BEATS PER MINUTE ---------
       		if (vLinkParam.exists("bpm")) {
       			var vBPM = vLinkParam.getValue("bpm");
             vBPM = parseInt(vBPM);
@@ -255,7 +253,21 @@
       			document.getElementById("bpmOutput").innerHTML = vBPM;
       			document.getElementById("bpmInput").value = vBPM;
       		} else {
-      			console.log("BPM is not set via LinkParameter 'bpmInput'")
+      			console.log("BPM is not set via LinkParameter 'bpmInput' set default 120bpm")
+            document.getElementById("bpmOutput").innerHTML = 120;
+      			document.getElementById("bpmInput").value = 120;
+      		}
+          //--- METER ------------------
+      		if (vLinkParam.exists("meter")) {
+      			var vMeter = vLinkParam.getValue("meter");
+            vMeter = parseInt(vMeter);
+      			console.log("Meter: "+vMeter);
+      			document.getElementById("countOutput").innerHTML = vMeter;
+      			document.getElementById("countInput").value = vMeter;
+      		} else {
+      			console.log("Meter is not set via LinkParameter 'meter' set default meter 4")
+            document.getElementById("countOutput").innerHTML = 4;
+      			document.getElementById("countInput").value = 4;
       		}
       	</script>
         <script type="text/javascript">
